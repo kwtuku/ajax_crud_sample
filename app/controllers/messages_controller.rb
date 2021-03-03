@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-  before_action :set_message, only: %i[destroy]
+  before_action :set_message, only: %i[destroy edit update]
   def index
     @messages = Message.all
   end
@@ -10,6 +10,13 @@ class MessagesController < ApplicationController
 
   def destroy
     @message.destroy!
+  end
+
+  def edit
+  end
+
+  def update
+    @message.update!(message_params)
   end
 
   private
