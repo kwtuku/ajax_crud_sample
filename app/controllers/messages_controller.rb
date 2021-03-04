@@ -19,6 +19,9 @@ class MessagesController < ApplicationController
     @message.update!(message_params)
   end
 
+  def new
+  end
+
   private
     def message_params
       params.require(:message).permit(:content)
