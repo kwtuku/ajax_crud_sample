@@ -4,6 +4,7 @@
   <%
 =begin%>
  <%= render partial: 'message', collection: @messages %> を省略した書き方 
+ @messagesから要素が一つずつ取り出され、部分テンプレート内の変数messageに入れられる
 <%
 =end%>
   <%= render @messages %>
