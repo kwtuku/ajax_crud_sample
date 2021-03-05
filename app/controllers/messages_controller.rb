@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[destroy edit update]
   def index
+    # モデルのすべての要素を配列で取得
     @messages = Message.all
   end
 
