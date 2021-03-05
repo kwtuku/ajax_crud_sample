@@ -1,5 +1,10 @@
 <%= render 'form', message: Message.new, value: '投稿' %>
 <hr>
 <div id="messages">
+  <%
+=begin%>
+ <%= render partial: 'message', collection: @messages %> を省略した書き方 
+<%
+=end%>
   <%= render @messages %>
 </div>
